@@ -1,4 +1,9 @@
 .nav-bar {
-    background-color: rgb(62, 220, 152);
+    background-color: #303439;
     height: 85px;
-  }
+}
+
+.nav-link {
+  color: whitesmoke;
+  text-decoration: none;
+}

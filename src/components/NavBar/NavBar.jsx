@@ -1,5 +1,6 @@
 import React from "react";
-import './NavBar.css'
+import {Link} from 'react-router-dom';
+import './NavBar.css';
 
 const NavBar = ({ user, handleLogout }) => {
   let nav = user ? 
@@ -8,10 +9,10 @@ const NavBar = ({ user, handleLogout }) => {
         <div className="nav-wrapper">
           <ul className="right">
             <li>
-              <a href={`/user/${user._id}`}>Welcome, {user.name}</a>
+              <Link to={`/user/${user._id}`} className="nav-link">Welcome, {user.name}</Link>
             </li>
             <li>
-              <a href=" " onClick={handleLogout}>Log Out</a>
+              <Link to=" " onClick={handleLogout} className="nav-link">Log Out</Link>
             </li>
           </ul>
         </div>
@@ -23,10 +24,10 @@ const NavBar = ({ user, handleLogout }) => {
         <div className="nav-wrapper">
           <ul className="right">
             <li>
-              <a href="/login">Log In</a>
+              <Link to="/login" className="nav-link">Log In</Link>
             </li>
             <li>
-              <a href="/signup">Sign Up</a>
+              <Link to="/signup" className="nav-link">Sign Up</Link>
             </li>
           </ul>
         </div>
