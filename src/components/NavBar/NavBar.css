@@ -1,9 +1,23 @@
 .nav-bar {
     background-color: #303439;
-    height: 85px;
+    height: 105px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+  height: 103px;
+}
+
+.nav-wrapper {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
 }
 
 .nav-link {
   color: whitesmoke;
   text-decoration: none;
+  list-style-type: none;
 }
