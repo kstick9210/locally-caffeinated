@@ -6,6 +6,11 @@
     align-items: center;
 }
 
+.logo-name-link {
+  display: flex;
+  text-decoration: none;
+}
+
 .logo {
   height: 85px;
 }
@@ -13,6 +18,7 @@
 .app-name {
   font-family: 'Fredericka the Great', sans-serif;
   color: whitesmoke;
+  align-self: center;
 }
 
 .nav-wrapper {
