@@ -7,7 +7,7 @@ const NavBar = ({ user, handleLogout }) => {
     <>
       <nav className="nav-bar">
         <Link to="/"><img 
-          src="https://i.imgur.com/pq3YwXH.png" 
+          src="https://i.imgur.com/J0GyZIF.png" 
           alt="Locally Caffeinated Logo"
           className="logo"/>
         </Link>
@@ -21,10 +21,11 @@ const NavBar = ({ user, handleLogout }) => {
     <>
       <nav className="nav-bar">
         <Link to="/"><img 
-          src="https://i.imgur.com/pq3YwXH.png" 
+          src="https://i.imgur.com/J0GyZIF.png" 
           alt="Locally Caffeinated Logo"
           className="logo"/>
         </Link>
+        <h1 className="app-name">Locally Caffeinated</h1>
         <div className="nav-wrapper">
           <Link to="/login" className="nav-link">Log In</Link>
           <Link to="/signup" className="nav-link">Sign Up</Link>

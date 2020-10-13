@@ -1,16 +1,21 @@
 .nav-bar {
     background-color: #303439;
-    height: 105px;
+    height: 85px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-  height: 103px;
+  height: 85px;
+}
+
+.app-name {
+  font-family: 'Fredericka the Great', sans-serif;
+  color: whitesmoke;
 }
 
 .nav-wrapper {
-  align-self: center;
   display: flex;
   flex-direction: column;
   padding-right: 10px;
@@ -20,4 +25,5 @@
   color: whitesmoke;
   text-decoration: none;
   list-style-type: none;
+  font-family: 'Open Sans', sans-serif;
 }
