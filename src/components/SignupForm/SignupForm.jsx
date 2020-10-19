@@ -33,16 +33,28 @@ const SignupForm = ({history, handleSignupOrLogin, updateMessage}) => {
   }
   
   return (
-    <div>
+    <div className="SignupFormComp">
       <h1 className="signup-title">Sign Up</h1>
       <form className="signup-form" autoComplete="off" onSubmit={handleSubmit} >
-        <input type="text" autoComplete="off" className="active signup-input" id="name" value={signupInfo.name} name="name" onChange={handleChange} placeholder="Name"/>
-        <input type="text" autoComplete="off" className="active signup-input" id="email" value={signupInfo.email} name="email" onChange={handleChange} placeholder="Email"/>
-        <input type="password" autoComplete="off" className="active signup-input" id="password" value={signupInfo.password} name="password" onChange={handleChange} placeholder="Password"/>
-        <input type="password" autoComplete="off" className="active signup-input" id="confirm" value={signupInfo.passwordConf} name="passwordConf" onChange={handleChange} placeholder="Confirm Password"/>
+        <div className="input-wrapper">
+          <label htmlFor="name" className="signup-label">Name: </label>
+          <input type="text" autoComplete="off" className="active signup-input" id="name" value={signupInfo.name} name="name" onChange={handleChange}/>
+        </div>
+        <div className="input-wrapper">
+          <label htmlFor="email" className="signup-label">Email: </label>
+          <input type="text" autoComplete="off" className="active signup-input" id="email" value={signupInfo.email} name="email" onChange={handleChange}/>
+        </div>
+        <div className="input-wrapper">
+          <label htmlFor="password" className="signup-label">Password: </label>
+          <input type="password" autoComplete="off" className="active signup-input" id="password" value={signupInfo.password} name="password" onChange={handleChange}/>
+        </div>
+        <div className="input-wrapper">
+          <label htmlFor="passwordConf" className="signup-label">Confirm Password: </label>
+          <input type="password" autoComplete="off" className="active signup-input" id="confirm" value={signupInfo.passwordConf} name="passwordConf" onChange={handleChange}/>
+        </div>
         <div className="btn-wrapper">
-          <button disabled={isFormInvalid()}>Sign Up</button>
-          <Link to="/">Cancel</Link>
+          <button className="btn pos-btn" disabled={isFormInvalid()}>Sign Up</button>
+          <Link to="/" className="btn neg-btn">Cancel</Link>
         </div>
       </form>
     </div>

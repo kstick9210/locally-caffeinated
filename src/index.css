@@ -4,8 +4,33 @@ body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: whitesmoke;
 }
 
 h1 {
   font-family: 'Fredericka the Great', sans-serif;
+}
+
+.btn {
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  border-radius: 10%;
+  font-size: large;
+}
+
+.pos-btn {
+  background-color: rgba(245, 245, 245, 0.9);
+  border: 1px solid black;
+}
+
+.neg-btn {
+  padding: 1px 5px;
+  background-color: rgba(189, 37, 32, .74);
+  color: inherit;
+}
+
+.neg-btn:hover {
+  color: rgba(189, 37, 32, .74);
+  background-color: whitesmoke;
+  font-weight: 900;
 }
