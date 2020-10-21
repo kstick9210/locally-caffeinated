@@ -10,11 +10,7 @@ const shopSchema = new Schema({
         type: String,
         required: true
     },
-    city: String,
-    flavors: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Flavor'
-    }]
+    city: String
 }, {timestamps: true})
 
 module.exports = mongoose.model('Shop', shopSchema);
