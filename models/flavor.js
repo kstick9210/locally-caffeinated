@@ -12,7 +12,10 @@ const flavorSchema = new Schema({
     },
     roaster: String,
     countryOrigin: String,
-    favorite: Boolean,
+    favorite: {
+        type: Boolean,
+        default: false
+    },
     decaf: {
         type: Boolean,
         default: false
