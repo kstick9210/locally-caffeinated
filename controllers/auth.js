@@ -11,7 +11,6 @@ module.exports = {
 
 async function signup(req, res) {
   const user = new User(req.body);
-  console.log(user, "<-- user for database");
   try {
     await user.save(function (err) {
       if (err) console.log(err)
