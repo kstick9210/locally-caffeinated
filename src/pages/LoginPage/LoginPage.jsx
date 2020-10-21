@@ -26,20 +26,24 @@ const LoginPage = ({history, handleSignupOrLogin}) => {
   }
   
   return (
-    <div className="LoginPage">
-      <h1>Log In</h1>
-      <form className="login-form" autoComplete="off" onSubmit={handleSubmit} >
-          <div>
+    <div className="flex-wrapper">
+      <div className="LoginPage">
+        <h1>Log In</h1>
+        <form className="login-form" autoComplete="off" onSubmit={handleSubmit} >
+          <div className="login-input-wrapper">
+            <label htmlFor="email" className="login-label">Email: </label>
             <input type="text" autoComplete="off" id="email" className="active login-input" value={loginInfo.email} name="email" onChange={handleChange} />
-            <label htmlFor="email">Email</label>
           </div>
-          <div>
+          <div className="login-input-wrapper">
+            <label htmlFor="password" className="login-label">Password: </label>
             <input type="password" autoComplete="off" className="active login-input" id="password" value={loginInfo.password} name="password" onChange={handleChange} />
-            <label htmlFor="password">Password</label>
           </div>
-          <button id="login-button">Log In</button>
-      </form>
-      <Link to='/'>Cancel</Link>
+          <div className="login-btn-wrapper">
+            <button className="btn pos-btn" id="login-button">Log In</button>
+            <Link to="/" className="btn neg-btn">Cancel</Link>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

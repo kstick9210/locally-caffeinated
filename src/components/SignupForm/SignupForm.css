@@ -17,11 +17,10 @@
     align-items: center;
 }
 
-.input-wrapper {
+.signup-input-wrapper {
     width: 90%;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
 }
 
 .signup-label {
@@ -41,7 +40,7 @@
     border-bottom: 2px solid rgba(245, 245, 245, 0.8);
 }
 
-.btn-wrapper {
+.signup-btn-wrapper {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -53,7 +52,7 @@
 }
 
 @media only screen and (max-width: 280px) {
-    .input-wrapper { 
+    .singup-input-wrapper { 
         flex-direction: column;
         padding-bottom: 10px;
     }

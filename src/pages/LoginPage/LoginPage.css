@@ -1,8 +1,19 @@
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .LoginPage {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+  margin-top: 15px;
+  width: 80vw;
+  border: 8px ridge burlywood;
+  padding: 10px;
+  background-color: #303439;
+  color: whitesmoke;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-form {
@@ -11,10 +22,42 @@
   margin-bottom: 20px;
 }
 
+.login-input-wrapper {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.login-label {
+  font-family: 'Handlee', sans-serif;
+  font-size: 22px;
+}
+
 .login-input {
   margin: 5px;
+  font-family: 'Handlee', sans-serif;
+  font-size: large;
+  margin: 5px;
+  background-color: #303439;
+  color: whitesmoke;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid rgba(245, 245, 245, 0.8);
+}
+
+.login-btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
 }
 
 #login-button {
   align-self: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .LoginPage { width: 440px; }
 }
