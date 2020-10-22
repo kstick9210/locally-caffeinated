@@ -12,6 +12,7 @@ import "./App.css";
 
 const App = () => {
   const [user, setUser] = useState('');
+  const [shops, setShops] = ([]);
 
   const handleLogout = () => {
     userService.logout();
@@ -20,6 +21,21 @@ const App = () => {
 
   const handleSignupOrLogin = () => {
     setUser(userService.getUser());
+  };
+
+  const handleSearchSubmit = async (event, searchTerm) => {
+    event.preventDefault();
+
+    axios
+      .get("/api/shops", {
+        params: {
+          searchTerm: searchTerm,
+        },
+      })
+      .then((response) => {
+        setShops(response.data.results);
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
