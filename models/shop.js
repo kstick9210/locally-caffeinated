@@ -10,7 +10,11 @@ const shopSchema = new Schema({
         type: String,
         required: true
     },
-    city: String
+    city: String,
+    favorite: {
+        type: Boolean,
+        default: false
+    }
 }, {timestamps: true})
 
 module.exports = mongoose.model('Shop', shopSchema);
