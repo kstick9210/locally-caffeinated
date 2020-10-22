@@ -1,6 +1,12 @@
 const router = require('express').Router();
 const shopsCtrl = require('../controllers/shops');
 
-router.post('/', shopsCtrl.create);
+router.use(require('../config/auth'));
+router.post('/', checkAuth, shopsCtrl.create);
+
+function checkAuth(req, res, next) {
+    if (req.user) return next();
+    return res.status(401).json({msg: 'Not Authorized'});
+}
 
 module.exports = router;
