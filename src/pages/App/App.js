@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Route, Switch } from 'react-router-dom';
 
-import NavBar from "../../components/NavBar/NavBar";
-
 import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
+import ShopSearchPage from '../ShopSearchPage/ShopSearchPage';
+
+import NavBar from "../../components/NavBar/NavBar";
 
 import userService from '../../services/userService';
 import * as GoogleAPI from '../../services/googleplaces-api';
@@ -26,6 +27,7 @@ const App = () => {
 
   const handleSearchSubmit = async (event, searchTerm) => {
     event.preventDefault();
+    console.log(searchTerm);
     
   };
 
@@ -51,6 +53,15 @@ const App = () => {
             <SignupPage 
               history={history}
               handleSignupOrLogin={handleSignupOrLogin}
+            />
+          </>
+        }></Route>
+
+        <Route exact path="/search" render={({history}) => 
+          <>
+            <ShopSearchPage 
+              history={history}
+              handleSearchSubmit={handleSearchSubmit}
             />
           </>
         }></Route>
