@@ -27,8 +27,8 @@ const App = () => {
 
   const handleSearchSubmit = async (event, searchTerm) => {
     event.preventDefault();
-    console.log(searchTerm);
-    
+    const shopsResults = await GoogleAPI.search(searchTerm);
+    console.log(shopsResults);
   };
 
   return (
