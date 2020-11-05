@@ -14,7 +14,7 @@ import "./App.css";
 
 const App = () => {
   const [user, setUser] = useState('');
-  const [shops, setShops] = ([]);
+  // const [shops, setShops] = ([]);
 
   const handleLogout = () => {
     userService.logout();
@@ -28,7 +28,8 @@ const App = () => {
   const handleSearchSubmit = async (event, searchTerm) => {
     event.preventDefault();
     const shopsResults = await GoogleAPI.search(searchTerm);
-    console.log(shopsResults);
+    console.log("handle search submit function after await");
+    console.log("shopsResults -->", shopsResults);
   };
 
   return (

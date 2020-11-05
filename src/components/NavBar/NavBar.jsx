@@ -18,6 +18,7 @@ const NavBar = ({ user, handleLogout }) => {
         <div className="nav-wrapper">
           <Link to={`/user/${user._id}`} className="nav-link">Welcome, {user.name}</Link>
           <Link to=" " onClick={handleLogout} className="nav-link">Log Out</Link>
+          <Link to="/search" className="nav-link">Search</Link>
         </div>
         :
         <div className="nav-wrapper">

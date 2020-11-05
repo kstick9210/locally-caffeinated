@@ -28,7 +28,6 @@ function logout() {
 }
 
 function login(creds) {
-  console.log(creds)
   return fetch(BASE_URL + 'login', {
     method: 'POST',
     headers: new Headers({'Content-Type': 'application/json'}),
@@ -39,7 +38,6 @@ function login(creds) {
   })
   .then(json => {
     if(json.token) return json;
-    console.log(json, '<-- the error')
     throw new Error(`${json.err || json.message}`)
   })
   .then(({token}) => tokenService.setToken(token));
