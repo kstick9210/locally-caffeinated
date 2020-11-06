@@ -1,5 +1,5 @@
 const axios = require("axios");
-const key = process.env.GOOGLE_API_KEY;
+const key = process.env.REACT_APP_GOOGLE_API_KEY;
 const CORS = "https://kstick-cors-anywhere.herokuapp.com/"
 const BASE_URL = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=coffee+shops+";
 
