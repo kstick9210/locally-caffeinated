@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './ShopSearchPage.css';
 
-import CoffeeShop from '../../components/CoffeeShop/CoffeeShop';
+import SearchResults from '../../components/SearchResults/SearchResults';
 
 export default function ShopSearchPage({ handleSearchSubmit, shops }) {
     const [searchTerm, setSearchTerm] = useState("");
@@ -24,15 +24,11 @@ export default function ShopSearchPage({ handleSearchSubmit, shops }) {
                 />
                 <button type="submit">Search</button>
             </form>
-            <div>
-            {shops.length ? 
-                shops.map(shop => {
-                    <CoffeeShop shop={shop} />
-                })
-            :
-            ''
-            }
-            </div>
+            {shops.length ? (
+                <SearchResults shops={shops} />
+            ) : (
+            <p></p>
+            )}
         </div>
     )
 }
