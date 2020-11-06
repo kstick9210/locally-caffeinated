@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch } from 'react-router-dom';
 
 import LoginPage from '../LoginPage/LoginPage';
@@ -31,6 +31,8 @@ const App = () => {
     setShops(searchResults.data.results);
   };
 
+  useEffect(() => console.log(shops))
+
   return (
     <>
       <NavBar 
@@ -62,6 +64,7 @@ const App = () => {
             <ShopSearchPage 
               history={history}
               handleSearchSubmit={handleSearchSubmit}
+              shops={shops}
             />
           </>
         }></Route>

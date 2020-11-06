@@ -1,0 +1,25 @@
+.SearchPage {
+    background-image: url("../../assets/coffee-beans.jpg");
+    background-position: top;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.city-search {
+    display: flex;
+    width: 50vw;
+    justify-content: center;
+}
+
+.city-search > input, .city-search > button {
+    font-family: 'Open Sans', sans-serif;
+    margin: 2px;
+}
+
+.city-search > input {
+    height: 1.5rem;
+}

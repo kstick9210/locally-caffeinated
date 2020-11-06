@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import './ShopSearchPage.css';
 
-export default function ShopSearchPage({handleSearchSubmit}) {
+import CoffeeShop from '../../components/CoffeeShop/CoffeeShop';
+
+export default function ShopSearchPage({ handleSearchSubmit, shops }) {
     const [searchTerm, setSearchTerm] = useState("");
 
     const handleInputChange = (event) => setSearchTerm(event.target.value)
@@ -10,6 +12,7 @@ export default function ShopSearchPage({handleSearchSubmit}) {
         <div className="SearchPage">
             <form
                 onSubmit={(event) => handleSearchSubmit(event, searchTerm)}
+                className="city-search"
             >
                 <input 
                     name="searchTerm"
@@ -17,9 +20,19 @@ export default function ShopSearchPage({handleSearchSubmit}) {
                     onChange={handleInputChange}
                     type="text"
                     required
+                    placeholder="Enter city"
                 />
                 <button type="submit">Search</button>
             </form>
+            <div>
+            {shops.length ? 
+                shops.map(shop => {
+                    <CoffeeShop shop={shop} />
+                })
+            :
+            ''
+            }
+            </div>
         </div>
     )
 }
