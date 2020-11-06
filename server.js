@@ -7,10 +7,9 @@ const port = process.env.PORT || 3001;
 require('dotenv').config();
 require('./config/database');
 
+const cors = require('cors');
 const authRouter = require('./routes/auth');
 const shopsRouter = require('./routes/shops');
-const googlePlacesRouter = require('./routes/googleplaces');
-const cors = require('cors');
 
 app.use(cors());
 app.use(logger('dev'));
@@ -18,7 +17,6 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.use('/api/auth', authRouter);
-app.use('/api/googleplaces', googlePlacesRouter);
 app.use('/api/shops', shopsRouter);
 
 app.get('/*', function(req, res) {
