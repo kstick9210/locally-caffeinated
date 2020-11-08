@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
 import ShopSearchPage from '../ShopSearchPage/ShopSearchPage';
+import ShopDetailsPage from '../ShopDetails/ShopDetailsPage';
 
 import NavBar from "../../components/NavBar/NavBar";
 
@@ -65,6 +66,14 @@ const App = () => {
               history={history}
               handleSearchSubmit={handleSearchSubmit}
               shops={shops}
+            />
+          </>
+        }></Route>
+
+        <Route exact path="/search" render={({history}) => 
+          <>
+            <ShopDetailsPage 
+              history={history}
             />
           </>
         }></Route>
