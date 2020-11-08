@@ -1,0 +1,33 @@
+.ShopDetailsPage {
+    display: flex;
+    text-align: center;
+}
+
+.shop-info-wrapper {
+    margin: 15px 10px 0 20px;
+    min-width: 35vw;
+    max-width: 40vw;
+    min-height: 40vh;
+    border: 8px ridge burlywood;
+    padding: 10px;
+    background-color: #303439;
+    color: whitesmoke;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.shop-info {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-family: 'Handlee', sans-serif;
+    font-size: 1.1rem;
+}
+
+.chalk-coffee {
+    /* margin-top: 20%; */
+    height: 100px;
+    /* justify-self: flex-end; */
+}
