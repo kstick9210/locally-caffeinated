@@ -1,0 +1,14 @@
+.CoffeeShop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shop-name {
+    display: flex;
+    align-items: center;
+}
+
+.places-icon {
+    height: 20px;
+}
