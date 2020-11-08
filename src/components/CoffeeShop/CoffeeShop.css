@@ -4,6 +4,28 @@
     align-items: center;
 }
 
+.CoffeeShop:after {
+    content: '';
+    width: 0; 
+    height: 3px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: rgb(145, 145, 145);
+    -webkit-transition: width .3s ease, content .3s ease-in;
+    -moz-transition: width .3s ease, content .3s ease-in;
+    -o-transition: width .3s ease, content .3s ease-in;
+    transition: width .3s ease, content .3s ease-in;
+}
+
+.CoffeeShop:hover:after {
+    content: 'Click for Details';
+    text-align: end;
+    width: 100%;
+    left: 0;
+    background: #000;
+}
+
 .shop-name {
     display: flex;
     align-items: center;
