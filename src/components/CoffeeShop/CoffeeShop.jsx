@@ -8,7 +8,9 @@ export default function CoffeeShop({shop}) {
                 <img src={shop.icon} alt="google places icon" className="places-icon"/>
                 &nbsp;{shop.name}
             </h1>
-            <h3>{shop.rating}</h3>
+            <h4 className="shop-address">{shop.formatted_address}</h4>
+            <h3>Google Rating: {shop.rating} ⭑</h3>
+            <br />
         </div>
     )
 }

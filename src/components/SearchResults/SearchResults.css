@@ -1,10 +1,20 @@
 .SearchResults {
-    background-color: rgba(145, 145, 145, 0.3);
-    padding-top: 20px;
+    background-color: rgba(145, 145, 145, 0.35);
+    padding: 15px 5px 0 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 60vw;
+}
+
+.results-key {
+    padding: 30px 0;
+}
+
+.results-key > hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 @media only screen and (min-width: 768px) {
