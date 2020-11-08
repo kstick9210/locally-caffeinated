@@ -9,7 +9,7 @@
     max-width: 40vw;
     min-height: 40vh;
     border: 8px ridge burlywood;
-    padding: 10px;
+    padding: 10px 15px;
     background-color: #303439;
     color: whitesmoke;
     display: flex;

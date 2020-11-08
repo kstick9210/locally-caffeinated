@@ -18,9 +18,9 @@ export default function ShopDetailsPage() {
 
     useEffect(() => {
         handleShopDetailsSearch(id);
-    })
+    }, [])
 
-    return (
+    let page = shopDetails ? 
         <div className="ShopDetailsPage">
             <div className="shop-info-wrapper">
                 <h1 className="shop-name">{shopDetails.name}</h1>
@@ -36,5 +36,14 @@ export default function ShopDetailsPage() {
                 lng={shopDetails.geometry.location.lng}
             />
         </div>
+     : 
+        <>
+            <h1 className="ShopDetailsPage">Loading</h1>
+        </>
+
+    return (
+        <>
+            {page}
+        </>
     )
 }
