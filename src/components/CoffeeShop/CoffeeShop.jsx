@@ -5,7 +5,7 @@ import "./CoffeeShop.css";
 export default function CoffeeShop({shop}) {
     return (
         <>
-            <Link to="/" className="CoffeeShop">
+            <Link to={`/shopdetails/${shop.place_id}`} className="CoffeeShop">
                 <h1 className="shop-name">
                     <img src={shop.icon} alt="google places icon" className="places-icon"/>
                     &nbsp;{shop.name}

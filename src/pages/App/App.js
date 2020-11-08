@@ -32,6 +32,11 @@ const App = () => {
     setShops(searchResults.data.results);
   };
 
+  const handleShopDetailsSearch = async (placeId) => {
+    const shopDetails = await GoogleAPI.getShopDetails(placeId);
+    console.log("shopDetails -->", shopDetails);
+  }
+
   useEffect(() => console.log(shops))
 
   return (
@@ -70,7 +75,7 @@ const App = () => {
           </>
         }></Route>
 
-        <Route exact path="/search" render={({history}) => 
+        <Route path="/shopdetails/:id" render={({history}) => 
           <>
             <ShopDetailsPage 
               history={history}

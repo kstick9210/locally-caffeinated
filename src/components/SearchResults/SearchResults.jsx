@@ -10,7 +10,9 @@ const SearchResults = ({ shops }) => {
                     <img src="https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png" className="places-icon" alt="cafe icon"/>
                     &nbsp;Cafe&nbsp;&nbsp;&nbsp;
                     <img src="https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png" className="places-icon" alt="restaurant icon" />
-                    &nbsp;Restaurant
+                    &nbsp;Restaurant&nbsp;&nbsp;&nbsp;
+                    <img src="https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png" className="places-icon" alt="shop icon" />
+                    &nbsp;Shop
                     </h2>
                     <hr />
             </div>
