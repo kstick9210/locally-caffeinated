@@ -26,8 +26,10 @@
     font-size: 1.1rem;
 }
 
+.shop-info > a {
+    padding-top: 2px;
+}
+
 .chalk-coffee {
-    /* margin-top: 20%; */
     height: 100px;
-    /* justify-self: flex-end; */
 }

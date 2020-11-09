@@ -5,7 +5,7 @@ import './NavBar.css';
 const NavBar = ({ user, handleLogout }) => {
   return (
     <nav className="nav-bar">
-    <div className="logo-name-wrapper">
+      <div className="logo-name-wrapper">
         <Link to="/" className="logo-name-link">
           <img 
           src="https://i.imgur.com/J0GyZIF.png" 
@@ -14,6 +14,7 @@ const NavBar = ({ user, handleLogout }) => {
           <h1 className="app-name">Locally Caffeinated</h1>
         </Link>
       </div>
+      <Link to="/search" className="nav-link underline">Search for Coffee Shops</Link>
       {user ? 
         <div className="nav-wrapper">
           <Link to={`/user/${user._id}`} className="nav-link">Welcome, {user.name}</Link>
@@ -22,8 +23,8 @@ const NavBar = ({ user, handleLogout }) => {
         </div>
         :
         <div className="nav-wrapper">
-          <Link to="/login" className="nav-link">Log In</Link>
-          <Link to="/signup" className="nav-link">Sign Up</Link>
+          <Link to="/login" className="nav-link underline">Log In</Link>
+          <Link to="/signup" className="nav-link underline">Sign Up</Link>
         </div>
       }
     </nav>

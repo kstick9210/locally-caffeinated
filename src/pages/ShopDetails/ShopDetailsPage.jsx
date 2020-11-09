@@ -25,9 +25,9 @@ export default function ShopDetailsPage() {
             <div className="shop-info-wrapper">
                 <h1 className="shop-name">{shopDetails.name}</h1>
                 <div className="shop-info">
-                    <a href={shopDetails.url} target="_blank"><h4 className="shop-address">{shopDetails.formatted_address}</h4></a>
+                    <a href={shopDetails.url} target="_blank"><h4 className="shop-address underline">{shopDetails.formatted_address}</h4></a>
                     <a href={`tel:${shopDetails.international_phone_number}`}>{shopDetails.international_phone_number}</a>
-                    <a href={shopDetails.website} target="_blank">{shopDetails.website}</a>
+                    <a href={shopDetails.website} target="_blank" className="underline">{shopDetails.website}</a>
                 </div>
                 <img src={chalkCup} alt="chalk coffee cup" className="chalk-coffee"/>
             </div>
