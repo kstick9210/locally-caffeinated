@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch } from "react-router-dom";
 
-import LoginPage from '../LoginPage/LoginPage';
-import SignupPage from '../SignupPage/SignupPage';
-import ShopSearchPage from '../ShopSearchPage/ShopSearchPage';
-import ShopDetailsPage from '../ShopDetails/ShopDetailsPage';
+import LoginPage from "../LoginPage/LoginPage";
+import SignupPage from "../SignupPage/SignupPage";
+import ShopSearchPage from "../ShopSearchPage/ShopSearchPage";
+import ShopDetailsPage from "../ShopDetails/ShopDetailsPage";
+import UserPage from "../UserPage/UserPage";
 
 import NavBar from "../../components/NavBar/NavBar";
 
-import userService from '../../services/userService';
-import * as GoogleAPI from '../../services/googleplaces-api';
+import userService from "../../services/userService";
+import * as GoogleAPI from "../../services/googleplaces-api";
 import * as ShopsAPI from "../../services/shops-api";
 
 import "./App.css";
@@ -84,6 +85,14 @@ const App = () => {
               history={history}
               user={user}
               handleAddShop={handleAddShop}
+            />
+          </>
+        }></Route>
+        <Route path="/user/:id" render={({history}) => 
+          <>
+            <UserPage 
+              history={history}
+              user={user}
             />
           </>
         }></Route>
