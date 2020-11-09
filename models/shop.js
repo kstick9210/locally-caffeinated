@@ -14,7 +14,8 @@ const shopSchema = new Schema({
     favorite: {
         type: Boolean,
         default: false
-    }
+    },
+    placeId : String
 }, {timestamps: true})
 
 module.exports = mongoose.model('Shop', shopSchema);
