@@ -7,7 +7,7 @@ import "./ShopDetailsPage.css";
 import chalkCup from "../../assets/chalk-coffee-cup.png";
 import * as GoogleAPI from '../../services/googleplaces-api';
 
-export default function ShopDetailsPage() {
+export default function ShopDetailsPage({user}) {
     const [shopDetails, setShopDetails] = useState("");
     const { id } = useParams();
 
@@ -30,6 +30,11 @@ export default function ShopDetailsPage() {
                     <a href={shopDetails.website} target="_blank" className="underline">{shopDetails.website}</a>
                 </div>
                 <img src={chalkCup} alt="chalk coffee cup" className="chalk-coffee"/>
+                {user ?
+                    <Link to="/" className="underline">Add to My Shops</Link>
+                :
+                    <Link to="/login" className="underline">Login to save this shop</Link>
+                }
             </div>
             <GoogleMaps 
                 lat={shopDetails.geometry.location.lat}

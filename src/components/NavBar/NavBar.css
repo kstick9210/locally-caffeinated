@@ -30,4 +30,11 @@
   color: whitesmoke;
   list-style-type: none;
   font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-link {
+    text-align: start;
+  }
 }

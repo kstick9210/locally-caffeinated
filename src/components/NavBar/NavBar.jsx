@@ -17,9 +17,9 @@ const NavBar = ({ user, handleLogout }) => {
       <Link to="/search" className="nav-link underline">Search for Coffee Shops</Link>
       {user ? 
         <div className="nav-wrapper">
-          <Link to={`/user/${user._id}`} className="nav-link">Welcome, {user.name}</Link>
-          <Link to=" " onClick={handleLogout} className="nav-link">Log Out</Link>
-          <Link to="/search" className="nav-link">Search</Link>
+          <Link to={`/user/${user._id}`} className="nav-link underline">Welcome, {user.name}</Link>
+          <Link to=" " onClick={handleLogout} className="nav-link underline">Log Out</Link>
+          <Link to="/search" className="nav-link underline">Search</Link>
         </div>
         :
         <div className="nav-wrapper">

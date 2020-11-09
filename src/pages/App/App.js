@@ -74,6 +74,7 @@ const App = () => {
           <>
             <ShopDetailsPage 
               history={history}
+              user={user}
             />
           </>
         }></Route>
