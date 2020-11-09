@@ -5,7 +5,7 @@ module.exports = {
 }
 
 function create(req, res) {
-    req.body.user = req.user._id;
+    console.log("req.body in controller -->", req.body);
     Shop.create(req.body)
     .then(shop => {res.json(shop)})
     .catch(err => {res.json(err)})

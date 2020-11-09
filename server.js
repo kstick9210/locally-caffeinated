@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const logger = require('morgan');
+const bodyParser = require('body-parser');
 const port = process.env.PORT || 3001;
 
 require('dotenv').config();
@@ -13,6 +14,7 @@ const shopsRouter = require('./routes/shops');
 
 app.use(cors());
 app.use(logger('dev'));
+app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'build')));
 

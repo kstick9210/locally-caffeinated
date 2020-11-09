@@ -10,12 +10,14 @@ import NavBar from "../../components/NavBar/NavBar";
 
 import userService from '../../services/userService';
 import * as GoogleAPI from '../../services/googleplaces-api';
+import * as ShopsAPI from "../../services/shops-api";
 
 import "./App.css";
 
 const App = () => {
   const [user, setUser] = useState('');
   const [shops, setShops] = useState([]);
+  const [userShops, setUserShops] = useState([]);
 
   const handleLogout = () => {
     userService.logout();
@@ -30,6 +32,12 @@ const App = () => {
     event.preventDefault();
     const searchResults = await GoogleAPI.search(searchTerm);
     setShops(searchResults.data.results);
+  };
+
+  const handleAddShop = async (shopData) => {
+    const newShop = await ShopsAPI.create(shopData);
+    console.log("newShop in app.js -->", newShop);
+    setUserShops([...userShops, newShop]);
   };
 
   useEffect(() => console.log(shops))
@@ -75,6 +83,7 @@ const App = () => {
             <ShopDetailsPage 
               history={history}
               user={user}
+              handleAddShop={handleAddShop}
             />
           </>
         }></Route>

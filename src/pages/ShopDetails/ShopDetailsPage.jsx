@@ -5,20 +5,28 @@ import GoogleMaps from '../../components/GoogleMaps/GoogleMaps';
 
 import "./ShopDetailsPage.css";
 import chalkCup from "../../assets/chalk-coffee-cup.png";
-import * as GoogleAPI from '../../services/googleplaces-api';
 
-export default function ShopDetailsPage({user}) {
+import * as GoogleAPI from "../../services/googleplaces-api";
+
+export default function ShopDetailsPage({ user, handleAddShop }) {
     const [shopDetails, setShopDetails] = useState("");
+    const [shopData, setShopData] = useState({});
     const { id } = useParams();
 
     const handleShopDetailsSearch = async (placeId) => {
         const shopDetailsResults = await GoogleAPI.getShopDetails(placeId);
         setShopDetails(shopDetailsResults.data.result);
-    }
+        setShopData({
+            user: user._id,
+            name: shopDetailsResults.data.result.name,
+            address: shopDetailsResults.data.result.formatted_address,
+            placeId: placeId
+        });
+    };
 
     useEffect(() => {
         handleShopDetailsSearch(id);
-    }, [])
+    }, []);
 
     let page = shopDetails ? 
         <div className="ShopDetailsPage">
@@ -31,7 +39,7 @@ export default function ShopDetailsPage({user}) {
                 </div>
                 <img src={chalkCup} alt="chalk coffee cup" className="chalk-coffee"/>
                 {user ?
-                    <Link to="/" className="underline">Add to My Shops</Link>
+                    <button onClick={() => handleAddShop(shopData)} className="underline">Add to My Shops</button>
                 :
                     <Link to="/login" className="underline">Login to save this shop</Link>
                 }
