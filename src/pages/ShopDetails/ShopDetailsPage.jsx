@@ -39,7 +39,7 @@ export default function ShopDetailsPage({ user, handleAddShop }) {
                 </div>
                 <img src={chalkCup} alt="chalk coffee cup" className="chalk-coffee"/>
                 {user ?
-                    <button onClick={() => handleAddShop(shopData)} className="underline">Add to My Shops</button>
+                    <button onClick={() => handleAddShop(shopData)} className="add-shop underline">Add to My Shops</button>
                 :
                     <Link to="/login" className="underline">Login to save this shop</Link>
                 }
