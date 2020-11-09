@@ -10,7 +10,7 @@ const shopSchema = new Schema({
         type: String,
         required: true
     },
-    city: String,
+    address: String,
     favorite: {
         type: Boolean,
         default: false
