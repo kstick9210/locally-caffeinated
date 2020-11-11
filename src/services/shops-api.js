@@ -13,3 +13,13 @@ export function create(shop) {
     .then(res => res.json())
     .catch((err) => console.log(err));
 }
+
+export function getUserShops(userId) {
+    return fetch(`${BASE_URL}user/${userId}`, {
+        headers: new Headers({"content-type": "application/json",
+            "Authorization": "Bearer " + tokenService.getToken()
+        })
+    }, {mode: "cors"})
+    .then(res => res.json())
+    .catch(err => console.log(err))
+}

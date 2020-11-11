@@ -1,7 +1,8 @@
 const Shop = require('../models/shop');
 
 module.exports = {
-    create
+    create,
+    getUserShops
 }
 
 function create(req, res) {
@@ -9,4 +10,10 @@ function create(req, res) {
     Shop.create(req.body)
     .then(shop => {res.json(shop)})
     .catch(err => {res.json(err)})
+}
+
+function getUserShops(req, res) {
+    Shop.find({ user:req.params.id })
+    .then(shops => res.json(shops))
+    .catch(err => res.json(err))
 }
