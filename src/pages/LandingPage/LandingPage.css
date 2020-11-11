@@ -12,6 +12,16 @@
     background-size: contain;
     background-repeat: no-repeat;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .LandingPage {
+        align-items: flex-end;
+        text-align: end;
+        padding-right: 15px;
+    }
 }
