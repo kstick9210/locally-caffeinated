@@ -22,7 +22,7 @@ export default function UserPage({user}) {
 
     let page = user ? (
         <div className="UserPage">
-            <h1>{user.name}</h1>
+            <h1>{user.name}'s Saved Shops</h1>
             {userShops.length ? (
                 <UserShops shops={userShops}/>
             ) : (
