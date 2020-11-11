@@ -1,0 +1,8 @@
+.UserPage {
+    background-image: url("../../assets/coffee-beans.jpg");
+    background-position: top;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}

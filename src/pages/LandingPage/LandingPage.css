@@ -1,0 +1,17 @@
+.LandingPage-wrapper {
+    background: -webkit-linear-gradient();
+    background: -moz-linear-gradient();
+    background: -o-linear-gradient();
+    background: linear-gradient(rgb(235, 238, 239), rgb(201, 202, 205));
+    height: 90vh;
+}
+
+.LandingPage {
+    background-image: url("../../assets/cup-and-beans.jpg");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}

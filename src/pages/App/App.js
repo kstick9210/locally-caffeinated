@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 
+import LandingPage from "../LandingPage/LandingPage";
 import LoginPage from "../LoginPage/LoginPage";
 import SignupPage from "../SignupPage/SignupPage";
 import ShopSearchPage from "../ShopSearchPage/ShopSearchPage";
@@ -51,6 +52,12 @@ const App = () => {
       />
 
       <Switch>
+      <Route exact path="/" render={() => 
+          <>
+            <LandingPage />
+          </>
+        }></Route>
+
         <Route exact path="/login" render={({history}) => 
           <>
             <LoginPage 
