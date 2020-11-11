@@ -1,0 +1,19 @@
+.UserShops {
+    /* background-color: rgba(145, 145, 145, 0.4); */
+    padding: 15px 5px 0 5px;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+}
+
+.user-shop {
+
+}
+
+@media only screen and (min-width: 768px) {
+    .UserShops {
+        justify-content: space-evenly;
+        padding-top: 0;
+        width: 40vw;
+    }
+}
