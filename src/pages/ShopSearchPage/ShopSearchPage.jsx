@@ -18,7 +18,7 @@ export default function ShopSearchPage({ handleSearchSubmit, shops }) {
                     name="searchTerm"
                     value={searchTerm}
                     onChange={handleInputChange}
-                    type="text"
+                    type="search"
                     required
                     placeholder="Enter city"
                 />
