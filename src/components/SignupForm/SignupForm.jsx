@@ -35,6 +35,7 @@ const SignupForm = ({history, handleSignupOrLogin, updateMessage}) => {
   return (
     <div className="SignupFormComp">
       <h1 className="signup-title">Sign Up</h1>
+      <br />
       <form className="signup-form" autoComplete="off" onSubmit={handleSubmit} >
         <div className="signup-input-wrapper">
           <label htmlFor="name" className="signup-label">Name: </label>
@@ -52,6 +53,7 @@ const SignupForm = ({history, handleSignupOrLogin, updateMessage}) => {
           <label htmlFor="passwordConf" className="signup-label">Confirm Password: </label>
           <input type="password" autoComplete="off" className="active signup-input" id="confirm" value={signupInfo.passwordConf} name="passwordConf" onChange={handleChange}/>
         </div>
+        <br />
         <div className="signup-btn-wrapper">
           <button className="btn pos-btn" disabled={isFormInvalid()}>Sign Up</button>
           <Link to="/" className="btn neg-btn">Cancel</Link>

@@ -29,6 +29,7 @@ const LoginPage = ({history, handleSignupOrLogin}) => {
     <div className="flex-wrapper">
       <div className="LoginPage">
         <h1>Log In</h1>
+        <br />
         <form className="login-form" autoComplete="off" onSubmit={handleSubmit} >
           <div className="login-input-wrapper">
             <label htmlFor="email" className="login-label">Email: </label>
@@ -38,6 +39,7 @@ const LoginPage = ({history, handleSignupOrLogin}) => {
             <label htmlFor="password" className="login-label">Password: </label>
             <input type="password" autoComplete="off" className="active login-input" id="password" value={loginInfo.password} name="password" onChange={handleChange} />
           </div>
+          <br />
           <div className="login-btn-wrapper">
             <button className="btn pos-btn" id="login-button">Log In</button>
             <Link to="/" className="btn neg-btn">Cancel</Link>
