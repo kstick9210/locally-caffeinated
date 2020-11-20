@@ -20,7 +20,7 @@ export default function ShopSearchPage({ handleSearchSubmit, shops }) {
                     onChange={handleInputChange}
                     type="search"
                     required
-                    placeholder="Enter city"
+                    placeholder="Search for coffee shops..."
                     autoFocus
                 />
                 <button type="submit" className="stlt-btn stlt-std-btn">Search</button>
@@ -28,7 +28,7 @@ export default function ShopSearchPage({ handleSearchSubmit, shops }) {
             {shops.length ? (
                 <SearchResults shops={shops} />
             ) : (
-            <p></p>
+            <h3 className="helper-text">Search by city, shop name, or both</h3>
             )}
         </div>
     )

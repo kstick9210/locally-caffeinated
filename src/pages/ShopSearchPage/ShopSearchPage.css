@@ -12,6 +12,8 @@
     display: flex;
     width: 50vw;
     justify-content: center;
+    padding-top: 30px;
+    margin-bottom: 15px;
 }
 
 .city-search > input, .city-search > button {
@@ -21,9 +23,11 @@
 
 .city-search > input {
     height: 1.7rem;
+    width: 220px;
     font-size: 1rem;
     border: 1px solid #303439;
     border-radius: 15px;
+    padding: 10px;
 }
 
 .stlt-btn {
@@ -52,4 +56,9 @@
 .stlt-std-btn:hover, .stlt-std-btn:focus {
     background-color: #9d9d9d;
     color: whitesmoke;
+}
+
+.helper-text {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 2px 3px;
 }
