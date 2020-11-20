@@ -21,8 +21,9 @@ export default function ShopSearchPage({ handleSearchSubmit, shops }) {
                     type="search"
                     required
                     placeholder="Enter city"
+                    autoFocus
                 />
-                <button type="submit">Search</button>
+                <button type="submit" className="stlt-btn stlt-std-btn">Search</button>
             </form>
             {shops.length ? (
                 <SearchResults shops={shops} />

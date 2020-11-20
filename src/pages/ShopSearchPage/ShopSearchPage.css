@@ -20,5 +20,36 @@
 }
 
 .city-search > input {
-    height: 1.5rem;
+    height: 1.7rem;
+    font-size: 1rem;
+    border: 1px solid #303439;
+    border-radius: 15px;
+}
+
+.stlt-btn {
+    font-family: sans-serif;
+    font-weight: 100;
+    text-decoration: none;
+    border-radius: 5%;
+    border: solid 1px;
+    font-size: large;
+    cursor: pointer;
+    padding: 1px 6px;
+    margin: 2px;
+    width: fit-content;
+}
+
+.stlt-btn:hover, .stlt-btn:focus {
+    font-weight: 400;
+}
+  
+.stlt-std-btn {
+    background-color: whitesmoke;
+    border-color: black;
+    color: black;
+}
+
+.stlt-std-btn:hover, .stlt-std-btn:focus {
+    background-color: #9d9d9d;
+    color: whitesmoke;
 }
