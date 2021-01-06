@@ -4,7 +4,7 @@ import "./CoffeeShop.css";
 
 export default function CoffeeShop({shop}) {
     return (
-        <>
+        <div>
             <Link to={`/shopdetails/${shop.place_id}`} className="CoffeeShop underline">
                 <h1 className="shop-name">
                     <img src={shop.icon} alt="google places icon" className="places-icon"/>
@@ -14,6 +14,6 @@ export default function CoffeeShop({shop}) {
                 <h3>Google Rating: {shop.rating} ⭑</h3>
             </Link>
             <br />
-        </>
+        </div>
     )
 }
