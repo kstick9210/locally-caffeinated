@@ -1,7 +1,12 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Locally Caffeinated",
+  "name": "Locally Caffeinated was designed and built by Kathleen Stickel",
   "icons": [
+    {
+      "src": "/images/chalk-coffee-cup.png",
+      "type": "image/png",
+      "sizes": "64x64 192x192 512x512"
+    }
   ],
   "start_url": ".",
   "display": "standalone",
